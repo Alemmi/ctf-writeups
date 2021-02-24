@@ -3,7 +3,7 @@ Hackme: Web hard - hxpctf 2020
 This year I played hxp ctf w/ [mHACKeroni](https://mhackeroni.it)
 ## The challenge
 The challenge is a [CodiMD](https://github.com/hackmdio/codimd) docker with report uri.
-In the challenge, a note called "the-flag" exists and it contents, obv, the fl4g. This challenge is very very intresting, I loved it but the Dockerfile is really B1GG, with my orrible network it took ~15 minutes for build ahahah. 
+In the challenge, a note called "the-flag" exists and it contents, obv, the fl4g. This challenge is very very intresting, I loved it but the Dockerfile is really B1GG, with my orrible network it took ~15 minutes for build ahahah.  
 (Solves: 15/1177, Fixed by CodiMD Team after issue [#1630](https://github.com/hackmdio/codimd/issues/1630))
 ## The bug
 This challenge, obviously, has an XSS vuln mlmlmlml!\
