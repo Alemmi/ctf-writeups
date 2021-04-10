@@ -58,7 +58,7 @@ The description says: ```The flag is in ./flag.txt```.
 
 Good: open function is in builtin methods.
 
-### Second Attemps: Craft a Notes istance with fd as note
+### Second Attemps: Craft a Notes instance with fd as note
 
 We do not have source code (the files in ctf-files was leaked by exploit), but now, we know some things:
 
