@@ -3,10 +3,9 @@ UBook: Web - viennabootcamp 2024 (0 solve, upsolved)
 Upsolved challenge during a bootcamp with some european national teams 
 ## The challenge
 The challenge is a login system. Login as admin gives you the FLAG.
-Seems it doesn't 
 ## Interesting points
 ### Unserialize
-The challenge have a `safe_unserialize` function to manage the json request
+The challenge has a `safe_unserialize` function to manage json requests
 ```python
 def safe_unserialize(obj: any) -> any:
     """Unpickle the object safely. Thx copilot <3"""
@@ -71,7 +70,7 @@ So we have to do a SQLi of course but how? Every query is prepared.
 
 Let me check the lib:
 
-This is the `mogrify` function for escape
+This is the `mogrify` function for escape args
 ```python
 def mogrify(self, query, args=None):
     conn = self._get_db()
@@ -99,7 +98,11 @@ def _escape_args(self, args, conn):
 Oh
 return `{key: conn.literal(val) for (key, val) in args.items()}`
 
+<<<<<<< HEAD
 The key are not escaped!!!! (after CTF the author([@lavish](https://github.com/lavish)) links his [advisory](https://github.com/advisories/GHSA-v9hf-5j83-6xpp), not found during event :/ )
+=======
+The key are not escaped!!!! (after CTF the author (@lavish) send the [advisor](https://github.com/PyMySQL/PyMySQL/releases/tag/v1.1.1), not found during event :/ )
+>>>>>>> 1030a65d7f154b848e415908d2079db0d6973c76
 
 So if we send this payload we have a syntax error (we can send any json object of course):
 ```json
@@ -115,9 +118,9 @@ So if we send this payload we have a syntax error (we can send any json object o
 
 Okay, obv the curly brackets :(
 
-After a ***big*** amount of hours of search on the internet, the query `mysql syntax curly brackets` I landend to this page [https://dev.mysql.com/doc/refman/8.4/en/expressions.html](https://dev.mysql.com/doc/refman/8.4/en/expressions.html)
+After a ***big*** amount of hours of search on the internet, with the query `mysql syntax curly brackets` I landend to this page [https://dev.mysql.com/doc/refman/8.4/en/expressions.html](https://dev.mysql.com/doc/refman/8.4/en/expressions.html)
 
-Yes, yes, yes i'm noob in google search
+Yes, yes, yes! I'm noob in google search
 
 ## Final Payload
 
