@@ -99,7 +99,7 @@ def _escape_args(self, args, conn):
 Oh
 return `{key: conn.literal(val) for (key, val) in args.items()}`
 
-The key are not escaped!!!! (after CTF the author(@lavish) links the [advisor](https://github.com/PyMySQL/PyMySQL/releases/tag/v1.1.1), not found during event :/ )
+The key are not escaped!!!! (after CTF the author([@lavish](https://github.com/lavish)) links his [advisory](https://github.com/advisories/GHSA-v9hf-5j83-6xpp), not found during event :/ )
 
 So if we send this payload we have a syntax error (we can send any json object of course):
 ```json
