@@ -82,7 +82,7 @@ Here, we have the real sandbox.
 
 ### Thymeleaf sandbox
 
-There isn't a known method to bypass the sandbox in the thyme leaf. We tried`"".class.forName`, but nothing works with the latest version (unless `0day`).
+There isn't a known method to bypass the sandbox in the `Thymeleaf`. We tried`"".class.forName`, but nothing works with the latest version (unless `0day`).
 
 So we need a gadget to escape this.
 
@@ -94,7 +94,7 @@ Let's search for a call to `Ognl.` in a static method (more easy to invoke)
 
 1 result:
 
-![Static](image.png)
+![Static](images/static-method.png)
 
 So, if we pass an expression to this call, it bypasses `Thymeleaf` because we call the `Ognl` class directly. Cool!
 
