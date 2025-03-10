@@ -1,4 +1,4 @@
-[WEB] Red wEDDIng (Unsolved in time)
+[WEB] Red wEDDIng
 ===
 Played with [about:blankets](https://x.com/aboutblankets)
 
